@@ -14,14 +14,6 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    public static class CloudMessageReceiver extends BroadcastReceiver {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Log.d(TAG, "onReceive: " + intent.getAction());
-        }
-    }
-
-    private CloudMessageReceiver cloudMessageReceiver = new CloudMessageReceiver();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +24,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        registerReceiver(cloudMessageReceiver, new IntentFilter(Intents.ACTION_CLOUD_MESSAGE_RECEIVED));
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        unregisterReceiver(cloudMessageReceiver);
     }
 }
