@@ -11,7 +11,7 @@ Simple app showing how to send a cloud message to display items on the second sc
 
 
 ## Send cloud message
-Using [Poynt Python SDK](https://github.com/poynt/poynt-python): 
+I'm using [Poynt Python SDK](https://github.com/poynt/poynt-python) to send the cloud message. Please make sure you update **buisness_id**, **store_id**, **device_id**, **class_name**, and **package_name**: 
 
 ~~~python
 [Thu Sep 07 11:17:25 dennis: ~] python
